@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>ScrollNZoom</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/white.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="css/theme/lens_nmf.css">
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+
+
+<!-- 				<section>
+					<p style="font-size:1.3em"> <strong>ScrollNZoom</strong><br>Interactive, Dynamic Exploration <br>of Representation Space</p><br>
+
+
+					<p style="font-size:1.1em"> 
+						
+						Sangho Suh<sup>1</sup>, Edith Law<sup>1</sup>, Pierre-Yves Oudeyer<sup>2</sup>
+						
+					<br><br>
+					</p>
+					<p style="font-size:0.9em">
+						<sup>1</sup>University of Waterloo <sup>2</sup>Inria Research
+					</p>	
+				</section>
+ -->
+				
+
+				<!-- Vertical Exploration (Slide Up/Down) -->
+				<section data-transition="zoom">
+					<!--Abstract-->
+					<section data-transition="zoom" data-transition-speed="fast">
+						<!-- <img src="img/hierarchy.png" alt=""> -->
+						<span style="font-size:0.7em; text-align: right">
+							The Beagle is a breed of hound.
+						</span>						
+					</section>	
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+							The Beagle is a breed of <strong style='color:#8a2be2'>small</strong> hound.
+						</span>
+					</section>	
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound<strong style="color:#8a2be2">, similar in appearance to foxhound.</strong>
+						</span>
+					</section>					
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to <strong style="color:#8a2be2">the much larger</strong> foxhound.
+						</span>
+					</section>						
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. <strong style="color:#8a2be2">The beagle is a scent hound.</strong>
+						</span>
+					</section>	
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound<strong style="color:#8a2be2">, developed primarily for hunting hare.</strong>
+						</span>
+					</section>	
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. <strong style="color:#8a2be2">The beagle is employed as detection dog.</strong>
+						</span>
+					</section>	
+
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. The beagle is employed as detection dog <strong style="color:#8a2be2">for prohibited agricultural imports and foodstuffs in quarantine around the world.</strong>
+						</span>
+					</section>
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. <strong style="color:#8a2be2">With a great sense of smell and superior tracking instinct,</strong> the beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. 
+						</span>
+					</section>
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. With a great sense of smell and superior tracking instinct, the beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. <strong style="color:#8a2be2">The beagle is intelligent</strong>.
+						</span>
+					</section>
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. With a great sense of smell and superior tracking instinct, the beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. The beagle is intelligent<strong style="color:#8a2be2"> but single-minded</strong>.
+						</span>
+					</section>
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. With a great sense of smell and superior tracking instinct, the beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. The beagle is intelligent but single-minded. <strong style="color:#8a2be2">It is a popular pet.</strong>
+						</span>
+					</section>					
+
+					<!--More Concrete-->
+					<section data-transition="zoom" data-transition-speed="fast">
+		 				<!-- <span style="font-size:1.3em"><strong style="color:black">General</strong></span><br> 					 -->
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. With a great sense of smell and superior tracking instinct, the beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. The beagle is intelligent but single-minded. It is a popular pet <strong style="color:#8a2be2">due to its size, good temper, and lack of inherited health problems</strong>.
+						</span>
+					</section>
+
+					<!--More Concrete-->
+					<section>
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. The beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. The beagle is intelligent but single-minded. It is a popular pet due to its size, good temper, and lack of inherited health problems. <strong style="color:#8a2be2">Beagle-type dogs have existed for 2,500 years</strong>.
+						</span>
+					</section>
+					
+					<!--More Concrete-->
+					<section>
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. The beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. The beagle is intelligent but single-minded. It is a popular pet due to its size, good temper, and lack of inherited health problems. <strong style="color:#8a2be2">Although</strong> beagle-type dogs have existed for 2,500 years, <strong style="color:#8a2be2">the modern breed was developed in Great Britain</strong>.
+						</span>
+					</section>
+
+					<!--More Concrete-->
+					<section>
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. The beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. The beagle is intelligent but single-minded. It is a popular pet due to its size, good temper, and lack of inherited health problems. Although beagle-type dogs have existed for 2,500 years, the modern breed was developed in Great Britain <strong style="color:#8a2be2">around the 1830s from several breeds</strong>.
+						</span>
+					</section>
+
+					<!--More Concrete-->
+					<section>
+						<span style="font-size:0.7em; text-align: right">
+						The Beagle is a breed of small hound, similar in appearance to the much larger foxhound. The beagle is a scent hound, developed primarily for hunting hare. The beagle is employed as detection dog for prohibited agricultural imports and foodstuffs in quarantine around the world. The beagle is intelligent but single-minded. It is a popular pet due to its size, good temper, and lack of inherited health problems. Although beagle-type dogs have existed for 2,500 years, the modern breed was developed in Great Britain around the 1830s <strong style="color:#8a2be2">from several breeds, including the Talbot Hound, the North Country Beagle, the Southern Hound, and possibly the Harrier</strong>.
+						</span>
+					</section>
+
+				</section>
+
+
+
+			</div>
+			
+
+
+
+			<div class="footer">
+
+				<div style="text-align:left; float:left; width:20%; margin-left:0.5%; margin-top:0.5%">
+					<!-- <img src="./img/beagle.jpg"> -->
+					<!-- <strong style="color:blue">Beagle</strong> -->
+				</div>
+
+			</div>
+
+
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Reveal.configure({
+			// 	backgroundTransition: 'zoom'
+			// })
+
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				// Display controls in the bottom right corner
+				controls: true,
+
+				// Display a presentation progress bar
+				progress: true,
+
+				// Display the page number of the current slide
+				slideNumber: false,
+
+				// Push each slide change to the browser history
+				history: true,
+				
+				// Enable the slide navigation via mouse wheel
+				mouseWheel: true,
+				
+				// Transition style
+				transition: 'zoom',
+				
+				// Transition speed
+				transitionSpeed: 'slow',
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
